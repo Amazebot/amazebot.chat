@@ -1,0 +1,11 @@
+nav.navbar.navbar-light.fixed-top(role="navigation")
+  a.navbar-brand(href="#") Navbar
+  button.navbar-toggler(type="button", data-toggle="collapse", data-target="#navbarSupportedContent", aria-controls="navbarSupportedContent", aria-expanded="false" aria-label="Toggle navigation")
+    span.navbar-toggler-icon
+  div#navbarSupportedContent.collapse.navbar-collapse
+    a.navbar-brand(href="/")
+      img(src="img/logo.png", height="30")
+    ul.navbar-nav.ml-auto
+      for title, href in public._data.navbar
+        li(class="navbar-item#{ current.source == href ? ' active' : '' }")
+          a.nav-link(href=href)

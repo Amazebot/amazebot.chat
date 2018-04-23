@@ -1,0 +1,11 @@
+{
+  "navbar": {
+    "/" : "Home",
+    "/about": "About"
+  },
+  "pages": {
+    "404": "¯\\_(ツ)_/¯",
+    "/": "Your bot strategy sidekick",
+    "about": "About the humans"
+  }
+}
