@@ -1,3 +1,50 @@
 $font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
 @import "../scss/bootstrap";
+
+header {
+  color: #9693EF;
+  background: #FBFBFB;
+}
+
+section.hero {
+  background-image: url("./img/hero-bg.png");
+  background-color: #5C56FF;
+}
+@include media-breakpoint-up(md) {
+  section.hero {
+    top: -200px;
+    padding-top: 200px;
+    background: #7EFFE2;
+    -webkit-clip-path: polygon(44% 200px, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(44% 200px, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  section.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 44%;
+    height: 100%;
+    background-image: url("./img/hero-bg.png");
+    background-color: #5C56FF;
+  }
+  section.hero::after {
+    -webkit-clip-path: polygon(0 200px, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 200px, 100% 0, 100% 100%, 0% 100%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: block;
+    width: 56%;
+    height: 90%;
+    background: repeating-linear-gradient(
+      90deg,
+      #7EFFE2,
+      #7EFFE2 10px,
+      #E2E1FF 10px,
+      #E2E1FF 20px
+    )
+  }
+}

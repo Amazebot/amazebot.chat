@@ -12,17 +12,19 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "harp": "harp server -p 2999",
-    "harp-pid": "ps -ef | grep harp",
-    "harp-kill": "kill $(ps aux | grep '[h]arp' | awk '{print $2}')",
-    "sync": "browser-sync start --proxy localhost:2999 --files public/**/*.js, public/**/*.css, public/**/*.html",
-    "dev": "npm-run-all --parallel harp sync",
+    "serve": "harp server -p 2999",
+    "kill": "kill $(ps aux | grep '[h]arp' | awk '{print $2}')",
+    "delay": "node ./node_modules/npm-delay 1000",
+    "sync": "yarn delay && browser-sync start --proxy localhost:2999 --files public/**/*.js, public/**/*.css, public/**/*.html",
+    "dev": "npm-run-all --parallel serve sync",
     "clean": "rm -R ./www 2> /dev/null || true",
     "install": "bower install --config.directory=public/components",
     "compile": "harp compile",
     "build": "npm run clean && npm run compile"
   },
   "devDependencies": {
+    "npm-delay": "^1.0.4",
+    "npm-run-all": "^4.1.2",
     "standard": "^11.0.1"
   }
 }
