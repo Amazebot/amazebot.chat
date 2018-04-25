@@ -1,13 +1,73 @@
-section.hero.position-relative.overflow-hidden.clearfix
+section#intro
+  .hero.position-relative.overflow-hidden.clearfix.text-light
+    .container
+      .row
+        .col-md-5
+          .ml-auto.p-5
+            h3 There's just something great about conversation.
+            p There's that buzz you get from sharing a new idea or expressing a feeling, when you're on the same page and it all just flows. You feel truly engaged. You'll never get that from filling out a form or navigating an interface. That's why we're all-in on conversational UI.
+section#mission.bg-light
+  container
+    .row
+      .col-md-8.col-lg-6.mx-auto
+        .p-5.text-center
+          h3.my-4 Amazebot provides messaging automation strategy in partnership with organisations who use our technology.
+          a.btn.btn-primary.btn-lg(href="/bbot") Meet bBot
+section#technology
   .container
     .row
-      .col-md-5.text-light
-        .ml-auto.p-3.p-md-5
-          h3 There's just something great about conversation.
-          p There's that buzz you get from sharing a new idea or expressing a feeling, when you're on the same page and it all just flows. You feel truly engaged. You'll never get that from filling out a form or navigating an interface. That's why we're all-in on conversational UI.
-      .col-md-7
-        .ml-auto.p-3.p-md-5
-section.container
-  .row
-    .col
-      h3 Amazebot provides messaging automation strategy in partnership with organisations who use our technology.
+      .col-md-8.col-lg-4.p-5.py-sm-4
+        h1.big 👌
+        p bBot is our conversation engine for building bespoke bots. It is open source and platform independent, making it secure, scalable and adaptive.
+      .col-md-8.col-lg-4.p-5.py-sm-4
+        h1.big 🤲
+        p We're experimenting, iterating and sharing without the global community. We give the technology away because our product is methodology, training and execution.
+      .col-md-8.col-lg-4.p-5.py-sm-4
+        h1.big 🤝
+        p We appeal to organisations looking for a partner who understands the messaging space and can give them the means to meaningfully solve problems for their community.
+section#stories.bg-blue.text-light.pb-3
+  #story-1.container
+    .row
+      .col-md-7.d-sm-none.d-md-block
+        img.img-fluid(src="img/blockparty.png", alt="Blockparty")
+      .col-md-5.text-right.p-5
+        .tag MAR '18
+        h4 Amazebot team wins the Blockstack Signature Fund bounty with a world first community chat platform for the decentralised web.
+        a.btn.btn-secondary(href="/blog/2018-03") Read more
+section.bg-light.clip.pb-3
+  #story-2.container
+    .row
+      .col-md-7.p-5
+        .tag FEB '18
+        h4 We worked with Rocket.Chat to improve the platform for its international community of bot creators, from hobby hackers to enterprise teams.
+        a.btn.btn-secondary(href="/blog/2018-02") Read more
+      .col-md-5.p-5.pt-sm-0.pt-sm-5.text-right
+          include img/bbot-logo.svg
+section.bg-lavender.text-light.clip
+  #story-3.container
+    .row.align-items-center.h-100
+      .col-md-6.p-5.pb-sm-0.pb-md-5.text-center
+        include img/meetup-logo.svg
+      .col-md-6.p-5.text-right
+        .tag JAN '18
+        h4 Melbourne Chatbot Messaging &amp; AI community experiencing rapid growth. See how we're contributing to sponsored meetups and alliances.
+        a.btn.btn-secondary(href="/blog/2018-01") Read more
+section.bg
+  .container
+    h3.text-center.px-5.pt-5 We're About Human-Centred Bots
+    .row
+      .col.px-5.py-3
+        .triangle.bg-rose.mx-auto.my-2
+        p Enhance, not replace human interaction
+      .col.px-5.py-3
+        .triangle.bg-rose.mx-auto.my-2
+        p Remove the mundane, for users and providers
+      .col.px-5.py-3
+        .triangle.bg-rose.mx-auto.my-2
+        p Engage participants in new and exciting ways
+section
+  .container
+    .row
+      .col-md-8.col-lg-6.mx-auto
+        p We've seen our bots support communities, decision making, and brand activation. We don't even know everything bBot can do. Join our maker community, get access to support and help all our bots achieve their potential.
+        a.btn.btn-primary Request an invite

@@ -1,50 +1,147 @@
 $font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
 
+$brand-blue: #5C56FF;
+$brand-purple: #9693EF;
+$brand-turquoise: #7EFFE2;
+$brand-aquamarine: #B7FFEF;
+$brand-pink: #EC94BF;
+$brand-rose: #E2E1FF;
+$brand-lavender: #9693EF;
+
+$theme-colors: (
+  "blue":       $brand-blue,
+  "purple":     $brand-purple,
+  "pink":       $brand-pink,
+  "turquoise":  $brand-turquoise,
+  "aquamarine": $brand-aquamarine,
+  "rose":       $brand-rose,
+  "lavender":   $brand-lavender
+);
+
+$gray-100: #FBFBFB;
+$primary: $brand-pink;
+
+$input-btn-padding-x: 1.2rem;
+$btn-border-radius: 99px;
+$btn-border-radius-lg: 99px;
+$line-height-base: 1.6;
+$headings-line-height: 1.4;
+
 @import "../scss/bootstrap";
 
-header {
-  color: #9693EF;
-  background: #FBFBFB;
-}
+$body-color: $gray-700;
 
-section.hero {
+body {
+  -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+nav {
+  background: rgba($color: white, $alpha: .9)
+}
+header {
+  color: $brand-purple;
+  background: $gray-100;
+  &>div {
+    z-index: 1;
+  }
+}
+.hero {
   background-image: url("./img/hero-bg.png");
-  background-color: #5C56FF;
+  background-color: $brand-blue;
 }
 @include media-breakpoint-up(md) {
-  section.hero {
+  .hero {
     top: -200px;
     padding-top: 200px;
-    background: #7EFFE2;
-    -webkit-clip-path: polygon(44% 200px, 100% 0, 100% 100%, 0 100%, 0 0);
-    clip-path: polygon(44% 200px, 100% 0, 100% 100%, 0 100%, 0 0);
+    margin-bottom: -200px;
+    background: $brand-turquoise;
+    -webkit-clip-path: polygon(46% 200px, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon(46% 200px, 100% 0, 100% 100%, 0 100%, 0 0);
   }
-  section.hero::before {
+  .hero::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     display: block;
-    width: 44%;
+    width: 46%;
     height: 100%;
     background-image: url("./img/hero-bg.png");
-    background-color: #5C56FF;
+    background-color: $brand-blue;
   }
-  section.hero::after {
+  .hero::after {
     -webkit-clip-path: polygon(0 200px, 100% 0, 100% 100%, 0% 100%);
     clip-path: polygon(0 200px, 100% 0, 100% 100%, 0% 100%);
     position: absolute;
     bottom: 0;
     right: 0;
     display: block;
-    width: 56%;
-    height: 90%;
+    width: 54%;
+    height: 80%;
     background: repeating-linear-gradient(
       90deg,
-      #7EFFE2,
-      #7EFFE2 10px,
-      #E2E1FF 10px,
-      #E2E1FF 20px
+      $brand-turquoise,
+      $brand-turquoise 10px,
+      $brand-rose 10px,
+      $brand-rose 20px
     )
   }
+}
+
+h1, h2, h3, h4 {
+  color: $brand-pink;
+}
+.text-light {
+  h1, h2, h3, h4 {
+    color: white;
+  }
+}
+.hero {
+  h1, h2, h3, h4 {
+    color: $brand-aquamarine;
+  }
+}
+
+.big {
+  font-size: 300%
+}
+
+.tag {
+  color: $brand-rose;
+  border-bottom: 3px solid $brand-rose;
+  display: inline-block;
+  padding: 0;
+  font-weight: bold;
+}
+
+.clip {
+  -webkit-clip-path: polygon(0 50px, 100% 0, 100% 100%, 0% 100%);
+  clip-path: polygon(0 50px, 100% 0, 100% 100%, 0% 100%);
+  padding-top: 50px;
+  margin-top: -50px;
+}
+
+.triangle {
+  width: 80px;
+  height: 60px;
+  -webkit-clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.btn-primary {
+  color: white
+}
+.btn-secondary {
+  @include button-variant(white, $brand-pink);
+  color: $brand-pink;
+}
+.bg-blue, .bg-lavender {
+  .btn-secondary {
+    @include button-variant($brand-turquoise, $brand-turquoise);
+    color: $brand-blue;
+  }
+}
+
+.bg {
+  background: url("/img/bg.png")
 }

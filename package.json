@@ -23,6 +23,7 @@
     "build": "npm run clean && npm run compile"
   },
   "devDependencies": {
+    "browser-sync": "^2.23.7",
     "npm-delay": "^1.0.4",
     "npm-run-all": "^4.1.2",
     "standard": "^11.0.1"
