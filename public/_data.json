@@ -1,7 +1,8 @@
 {
   "navbar": {
     "/" : "Home",
-    "/about": "About"
+    "/bBot": "bBot",
+    "/governance": "Governance"
   },
   "pages": {
     "404": "¯\\_(ツ)_/¯",

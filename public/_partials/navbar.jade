@@ -1,6 +1,7 @@
 nav.site-header.sticky-top.py-1(role="navigation")
-  div.container.d-flex.flex-column.flex-md-row.justify-content-between
-    a.py-2(href="#")
+  div.container
+    a.py-2.d-inline-block(href="/")
       include /img/logo-small.svg
+    .float-right
       for title, href in public._data.navbar
-        a.py-2.d-none.d-md-inline-block(href=href)
+        a.py-2.d-inline-block.bold.mx-2(href=href)= title

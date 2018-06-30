@@ -1,4 +1,11 @@
 $font-family-sans-serif: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-size-base: 1.2rem;
+$h1-font-size:                $font-size-base * 2.2;
+$h2-font-size:                $font-size-base * 1.75;
+$h3-font-size:                $font-size-base * 1.5;
+$h4-font-size:                $font-size-base * 1.2;
+$h5-font-size:                $font-size-base * 1;
+$h6-font-size:                $font-size-base;
 
 $brand-blue: #5C56FF;
 $brand-purple: #9693EF;
@@ -30,13 +37,16 @@ $headings-line-height: 1.4;
 @import "../scss/bootstrap";
 
 $body-color: $gray-700;
+$hero-clip: 200px;
+$hero-major: 55%;
+$hero-minor: 45%;
 
 body {
   -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
 nav {
-  background: rgba($color: white, $alpha: .9)
+  background: white;
 }
 header {
   color: $brand-purple;
@@ -49,14 +59,22 @@ header {
   background-image: url("./img/hero-bg.png");
   background-color: $brand-blue;
 }
+footer {
+  background-image: url("./img/hero-bg.png");
+  background-color: $brand-blue;
+}
+section svg {
+  max-width: 400px;
+}
+
 @include media-breakpoint-up(md) {
   .hero {
-    top: -200px;
-    padding-top: 200px;
-    margin-bottom: -200px;
+    top: -$hero-clip;
+    padding-top: $hero-clip;
+    margin-bottom: -$hero-clip;
     background: $brand-turquoise;
-    -webkit-clip-path: polygon(46% 200px, 100% 0, 100% 100%, 0 100%, 0 0);
-    clip-path: polygon(46% 200px, 100% 0, 100% 100%, 0 100%, 0 0);
+    -webkit-clip-path: polygon($hero-major $hero-clip, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon($hero-major $hero-clip, 100% 0, 100% 100%, 0 100%, 0 0);
   }
   .hero::before {
     content: '';
@@ -64,19 +82,19 @@ header {
     top: 0;
     left: 0;
     display: block;
-    width: 46%;
+    width: $hero-major;
     height: 100%;
     background-image: url("./img/hero-bg.png");
     background-color: $brand-blue;
   }
   .hero::after {
-    -webkit-clip-path: polygon(0 200px, 100% 0, 100% 100%, 0% 100%);
-    clip-path: polygon(0 200px, 100% 0, 100% 100%, 0% 100%);
+    -webkit-clip-path: polygon(0 $hero-clip, 100% 0, 100% 100%, 0% 100%);
+    clip-path: polygon(0 $hero-clip, 100% 0, 100% 100%, 0% 100%);
     position: absolute;
     bottom: 0;
     right: 0;
     display: block;
-    width: 54%;
+    width: $hero-minor;
     height: 80%;
     background: repeating-linear-gradient(
       90deg,
@@ -85,6 +103,18 @@ header {
       $brand-rose 10px,
       $brand-rose 20px
     )
+  }
+}
+@include media-breakpoint-up(lg) {
+  .hero {
+    -webkit-clip-path: polygon($hero-minor $hero-clip, 100% 0, 100% 100%, 0 100%, 0 0);
+    clip-path: polygon($hero-minor $hero-clip, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
+  .hero::before {
+    width: $hero-minor;
+  }
+  .hero::after {
+    width: $hero-major;
   }
 }
 
