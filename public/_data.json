@@ -1,8 +1,8 @@
 {
   "navbar": {
     "/" : "Home",
-    "/bBot": "bBot",
-    "/governance": "Governance"
+    "/values": "Values",
+    "https://bbot.chat": "Tech"
   },
   "pages": {
     "404": "¯\\_(ツ)_/¯",

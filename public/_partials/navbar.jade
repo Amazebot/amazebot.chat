@@ -1,7 +1,6 @@
-nav.site-header.sticky-top.py-1(role="navigation")
-  div.container
-    a.py-2.d-inline-block(href="/")
-      include /img/logo-small.svg
-    .float-right
-      for title, href in public._data.navbar
-        a.py-2.d-inline-block.bold.mx-2(href=href)= title
+nav.site-header.sticky-top.py-2.px-4(role="navigation")
+  a.py-2.d-inline-block(href="/")
+    include /img/logo-small.svg
+  .float-right
+    for title, href in public._data.navbar
+      a.py-2.d-inline-block.bold.mx-2(href=href)= title

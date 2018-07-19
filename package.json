@@ -12,10 +12,10 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "serve": "harp server -p 2999",
+    "serve": "harp server -p 2998",
     "kill": "kill $(ps aux | grep '[h]arp' | awk '{print $2}')",
     "delay": "node ./node_modules/npm-delay 1000",
-    "sync": "yarn delay && browser-sync start --proxy localhost:2999 --files public/**/*.js, public/**/*.css, public/**/*.html",
+    "sync": "yarn delay && browser-sync start --port 3001 --proxy localhost:2998 --files public/**/*.js, public/**/*.css, public/**/*.html",
     "dev": "npm-run-all --parallel serve sync",
     "clean": "rm -R ./www 2> /dev/null || true",
     "install": "bower install --config.directory=public/components",
