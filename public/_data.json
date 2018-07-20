@@ -2,7 +2,7 @@
   "navbar": {
     "/" : "Home",
     "/values": "Values",
-    "https://bbot.chat": "Tech"
+    "//bbot.chat": "Tech"
   },
   "pages": {
     "404": "¯\\_(ツ)_/¯",

@@ -2,7 +2,7 @@
   "name": "amazebot.chat",
   "version": "1.0.0",
   "description": "amazebot.chat build dependencies",
-  "main": "www/index.html",
+  "main": "docs/index.html",
   "repository": "https://github.com/Amazebot/amazebot.chat.git",
   "author": "Tim Kinnane <timkinnane@gmail.com>",
   "license": "MIT",
@@ -17,9 +17,9 @@
     "delay": "node ./node_modules/npm-delay 1000",
     "sync": "yarn delay && browser-sync start --port 3001 --proxy localhost:2998 --files public/**/*.js, public/**/*.css, public/**/*.html",
     "dev": "npm-run-all --parallel serve sync",
-    "clean": "rm -R ./www 2> /dev/null || true",
-    "install": "bower install --config.directory=public/components",
-    "compile": "harp compile",
+    "clean": "rm -R ./docs 2> /dev/null || true",
+    "install": "bower install --config.directory=public/_components",
+    "compile": "harp compile ./ ./docs",
     "build": "npm run clean && npm run compile"
   },
   "devDependencies": {
