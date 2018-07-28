@@ -219,3 +219,9 @@ h1, h2, h3, h4 {
 .highlight {
   background-color: $brand-rose;
 }
+.circle {
+  max-width: 240px;
+  border-radius: 100%;
+  background: white;
+  padding: 3em;
+}
