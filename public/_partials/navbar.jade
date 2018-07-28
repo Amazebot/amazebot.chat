@@ -1,6 +1,6 @@
 nav.site-header.sticky-top.py-2.px-4(role="navigation")
-  a.py-2.d-inline-block(href="/")
+  a.py-2.xs-hidden.float-left.mt-1.d-none.d-sm-inline-block(href="/")
     include /img/logo-small.svg
-  .float-right
+  .ml-auto.text-right
     for title, href in public._data.navbar
       a.py-2.d-inline-block.bold.mx-2(href=href)= title

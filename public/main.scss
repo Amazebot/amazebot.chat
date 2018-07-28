@@ -91,10 +91,21 @@ body > footer {
   margin-right: auto;
 }
 
+#logo img { max-width: 100% }
+#logo { margin-bottom: .5em }
+#logo + h2 { font-size: 1.6rem }
+.hero {
+  clip-path: polygon(0 0,100% 90px,100% 100%,0 100%,0 0);
+  padding-top: 90px;
+  margin-top: -45px;
+}
+
 @include media-breakpoint-up(md) {
+  #logo + h2 { font-size: 2rem }
   .hero {
     top: -$hero-clip;
     padding-top: $hero-clip;
+    margin-top: 0;
     margin-bottom: -$hero-clip;
     background: $brand-turquoise;
     -webkit-clip-path: polygon($hero-major $hero-clip, 100% 0, 100% 100%, 0 100%, 0 0);
