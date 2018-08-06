@@ -1,6 +1,6 @@
 {
   "name": "amazebot.chat",
-  "homepage": "amazebot.chat",
+  "homepage": "http://amazebot.chat",
   "authors": [
     "Tim Kinnane <tim.kinnane@amazebot.chat>"
   ],
@@ -18,6 +18,6 @@
   ],
   "directory": "public/components",
   "dependencies": {
-    "bootstrap": "4"
+    "bootstrap": "4.1.3"
   }
 }

@@ -6,10 +6,6 @@
   "repository": "https://github.com/Amazebot/amazebot.chat.git",
   "author": "Tim Kinnane <timkinnane@gmail.com>",
   "license": "MIT",
-  "dependencies": {
-    "bower": "^1.8.4",
-    "harp": "^0.25.0"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "serve": "harp server -p 2998",
@@ -23,6 +19,8 @@
     "build": "npm run clean && npm run compile"
   },
   "devDependencies": {
+    "bower": "^1.8.4",
+    "harp": "^0.25.0",
     "browser-sync": "^2.23.7",
     "npm-delay": "^1.0.4",
     "npm-run-all": "^4.1.2",
