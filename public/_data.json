@@ -1,12 +1,14 @@
 {
   "navbar": {
     "/" : "Home",
+    "/about": "About",
     "/values": "Values",
     "//bbot.chat": "Tech"
   },
   "pages": {
     "404": "¯\\_(ツ)_/¯",
     "index": "Your bot strategy sidekick",
-    "about": "About the humans"
+    "values": "Our Values",
+    "about": "Our Story"
   }
 }
