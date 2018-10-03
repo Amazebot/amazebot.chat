@@ -3,12 +3,14 @@
     "/" : "Home",
     "/about": "About",
     "/values": "Values",
+    "/news": "News",
     "//bbot.chat": "Tech"
   },
   "pages": {
     "404": "¯\\_(ツ)_/¯",
     "index": "Your bot strategy sidekick",
     "values": "Our Values",
-    "about": "Our Story"
+    "about": "Our Story",
+    "news": "What's New"
   }
 }
